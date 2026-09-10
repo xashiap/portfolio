@@ -364,35 +364,93 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* --------------------------------------------------------------------------
-     CONTACT FORM HANDLING
+     CONTACT FORM HANDLING (Telegram Bot Integration)
      -------------------------------------------------------------------------- */
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    const TG_BOT_TOKEN = '8688674357:AAEAZ_qYsBrgIBzkWC6S4hyX8JouN0rwf_k';
+    const TG_CHAT_ID = '6595586966';
+
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       const submitBtn = document.getElementById('formSubmitBtn');
       const originalText = submitBtn.innerHTML;
 
+      const name = document.getElementById('userName').value.trim();
+      const email = document.getElementById('userEmail').value.trim();
+      const serviceSelect = document.getElementById('userService');
+      const serviceText = serviceSelect.options[serviceSelect.selectedIndex].text;
+      const message = document.getElementById('userMessage').value.trim();
+
       // Show loading indicator
       submitBtn.disabled = true;
       submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> <span>${translations[currentLang].contact.sending}</span>`;
+      formFeedback.style.display = 'none';
 
-      // Simulate asynchronous sending
-      setTimeout(() => {
+      const escapeHtml = (str) => str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+      const tgMessage = 
+`🎬 <b>درخواست پروژه جدید از سایت پورتفولیو</b>\n\n` +
+`👤 <b>نام کارفرما:</b> ${escapeHtml(name)}\n` +
+`📧 <b>ایمیل:</b> ${escapeHtml(email)}\n` +
+`🏷 <b>نوع پروژه:</b> ${escapeHtml(serviceText)}\n\n` +
+`📝 <b>توضیحات:</b>\n${escapeHtml(message)}\n\n` +
+`🌐 <b>زبان سایت:</b> ${currentLang.toUpperCase()}\n` +
+`⏰ <b>زمان ثبت:</b> ${new Date().toLocaleString('fa-IR')}`;
+
+      // Plain text for direct telegram/whatsapp fallback link
+      const fallbackText = encodeURIComponent(
+`سلام خشایار عزیز، من از طریق سایت پیام می‌دهم:\n\nنام: ${name}\nایمیل: ${email}\nنوع پروژه: ${serviceText}\nتوضیحات: ${message}`
+      );
+
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 6000);
+
+        const response = await fetch(`https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            chat_id: TG_CHAT_ID,
+            text: tgMessage,
+            parse_mode: 'HTML'
+          }),
+          signal: controller.signal
+        });
+
+        clearTimeout(timeoutId);
+
+        const result = await response.json();
+
+        if (result.ok) {
+          formFeedback.className = 'form-feedback success';
+          formFeedback.innerHTML = `<i class="fa-solid fa-circle-check"></i> ${translations[currentLang].contact.sentSuccess}`;
+          formFeedback.style.display = 'block';
+          contactForm.reset();
+        } else {
+          throw new Error(result.description || 'Telegram API Error');
+        }
+      } catch (err) {
+        // Fallback if Telegram API blocked or network fails
+        formFeedback.className = 'form-feedback error';
+        formFeedback.innerHTML = `
+          <div><i class="fa-solid fa-triangle-exclamation"></i> ${translations[currentLang].contact.sentError}</div>
+          <div class="feedback-actions">
+            <a href="https://t.me/xashiap?text=${fallbackText}" target="_blank" class="feedback-btn">
+              <i class="fa-brands fa-telegram"></i> ${translations[currentLang].contact.btnTelegram}
+            </a>
+            <a href="https://wa.me/989351289395?text=${fallbackText}" target="_blank" class="feedback-btn">
+              <i class="fa-brands fa-whatsapp"></i> ${translations[currentLang].contact.btnWhatsapp}
+            </a>
+          </div>
+        `;
+        formFeedback.style.display = 'block';
+      } finally {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
-
-        formFeedback.className = 'form-feedback success';
-        formFeedback.textContent = translations[currentLang].contact.sentSuccess;
-
-        contactForm.reset();
-
-        // Hide success message after 6 seconds
-        setTimeout(() => {
-          formFeedback.style.display = 'none';
-          formFeedback.className = 'form-feedback';
-        }, 6000);
-      }, 1000);
+      }
     });
   }
 
