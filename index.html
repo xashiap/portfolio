@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>خشایار آذرپیرا | پورتفولیو تدوین، موشن گرافیک و گرافیک</title>
+  <meta name="description" content="پورتفولیو و نمونه کارهای خشایار آذرپیرا در زمینه تدوین ویدیو، موشن گرافیک، اصلاح رنگ و طراحی گرافیک">
+  <meta name="author" content="Khashayar Azarpira">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Glow Effects -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- ==========================================================================
+       NAVIGATION BAR
+       ========================================================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#home" class="logo">
+        <div class="logo-icon">
+          <i class="fa-solid fa-film"></i>
+        </div>
+        <span class="logo-text"><span class="gradient-text">خشایار</span> آذرپیرا</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" data-i18n="nav.home">خانه</a></li>
+        <li><a href="#about" class="nav-link" data-i18n="nav.about">درباره من</a></li>
+        <li><a href="#skills" class="nav-link" data-i18n="nav.skills">مهارت‌ها</a></li>
+        <li><a href="#portfolio" class="nav-link" data-i18n="nav.portfolio">نمونه‌کارها</a></li>
+        <li><a href="#experience" class="nav-link" data-i18n="nav.experience">سوابق</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav.contact">تماس</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Language Switcher Button -->
+        <button class="icon-btn lang-btn" id="langToggle" title="تغییر زبان / Switch Language">
+          <span id="langText">EN</span>
+        </button>
+
+        <!-- Dark/Light Theme Switcher Button -->
+        <button class="icon-btn" id="themeToggle" title="تغییر تم / Toggle Theme">
+          <i class="fa-solid fa-sun" id="themeIcon"></i>
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="icon-btn hamburger-btn" id="hamburgerBtn" aria-label="Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <section class="hero section" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="badge-tag">
+            <span class="pulse-dot"></span>
+            <span data-i18n="hero.badge">آماده دریافت پروژه‌های جدید و همکاری ریموت</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span data-i18n="hero.greeting">سلام، من</span> <span class="gradient-text" data-i18n="hero.name">خشایار آذرپیرا</span> <br>
+            <span style="font-size: 0.85em;" data-i18n="hero.role">تدوینگر ویدیو | طراح موشن گرافیک | طراح گرافیک</span>
+          </h1>
+
+          <p class="hero-description" data-i18n="hero.description">
+            بیش از ۶ سال است که در زمینه تدوین تیزرهای تبلیغاتی، موشن‌گرافیک و طراحی گرافیک فعالیت می‌کنم و ایده‌ها را با ریتم و جلوه‌های بصری خیره‌کننده به تصویر می‌کشم.
+          </p>
+
+          <div class="hero-cta">
+            <button class="btn btn-primary btn-glow" id="heroShowreelBtn">
+              <i class="fa-solid fa-play"></i>
+              <span data-i18n="hero.btnShowreel">تماشای شو ریل</span>
+            </button>
+            <a href="#portfolio" class="btn btn-secondary">
+              <i class="fa-solid fa-layer-group"></i>
+              <span data-i18n="hero.btnPortfolio">مشاهده نمونه‌کارها</span>
+            </a>
+            <a href="https://t.me/xashiap" target="_blank" class="btn btn-secondary">
+              <i class="fa-brands fa-telegram"></i>
+              <span data-i18n="hero.btnResume">پیام در تلگرام</span>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fa-regular fa-paper-plane"></i>
+              <span data-i18n="hero.btnContact">ارتباط با من</span>
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://instagram.com/xashi_" target="_blank" class="social-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://t.me/xashiap" target="_blank" class="social-link" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+            <a href="https://wa.me/989351289395" target="_blank" class="social-link" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="mailto:xashiwork@gmail.com" class="social-link" title="Email"><i class="fa-regular fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <!-- Creative Visual Showcase -->
+        <div class="hero-visual">
+          <!-- Floating Software Badges -->
+          <div class="floating-badge badge-top-left">
+            <div class="badge-icon icon-ae">Ae</div>
+            <div>
+              <div>After Effects</div>
+              <small style="color: var(--text-muted); font-size: 0.7rem;">Motion & VFX</small>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-bottom-right">
+            <div class="badge-icon icon-pr">Pr</div>
+            <div>
+              <div>Premiere Pro</div>
+              <small style="color: var(--text-muted); font-size: 0.7rem;">Cinematic Edit</small>
+            </div>
+          </div>
+
+          <div class="visual-monitor">
+            <div class="monitor-header">
+              <div class="monitor-dot dot-red"></div>
+              <div class="monitor-dot dot-yellow"></div>
+              <div class="monitor-dot dot-green"></div>
+              <span style="font-size: 0.75rem; color: var(--text-muted); margin-left: 8px;">Showreel_Master_4K_Final.mp4</span>
+            </div>
+            
+            <div class="monitor-screen" id="heroMonitorPlay">
+              <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=900&q=80" alt="Video Edit Preview">
+              <div class="monitor-overlay-play">
+                <i class="fa-solid fa-play"></i>
+              </div>
+            </div>
+
+            <div class="monitor-timeline">
+              <div class="timeline-track">
+                <div class="timeline-clip clip-1"></div>
+                <div class="timeline-clip clip-2"></div>
+                <div class="timeline-clip clip-3"></div>
+              </div>
+              <div class="timeline-track-audio">
+                <div class="audio-bar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ABOUT SECTION
+       ========================================================================== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-card">
+          <img src="profile.png" alt="خشایار آذرپیرا" style="object-position: top center; height: 500px;">
+          <div class="about-image-badge">
+            <i class="fa-solid fa-film"></i>
+            <div>
+              <h5>خشایار آذرپیرا</h5>
+              <p>تدوینگر، طراح موشن گرافیک و گرافیک</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <div class="badge-tag">
+            <i class="fa-regular fa-user"></i>
+            <span data-i18n="about.badge">آشنایی بیشتر</span>
+          </div>
+
+          <h2 class="section-title" data-i18n="about.title">درباره من و دنیای تصویر</h2>
+
+          <p data-i18n="about.p1">
+            من خشایار آذرپیرا هستم؛ تدوینگر، طراح موشن‌گرافیک و گرافیست با ۶ سال سابقه فعالیت حرفه‌ای به صورت فریلنسری و همکاری با شرکت‌ها و استودیوهای مطرح مانند انبوه‌سازان هوتن و استودیو متانو.
+          </p>
+
+          <p data-i18n="about.p2">
+            تمرکز من بر خلق ریتم‌های گیرا در تدوین، اصلاح رنگ سینمایی، موشن‌گرافیک‌های مدرن و طراحی هویت بصری است. همچنین با به‌کارگیری جدیدترین ابزارهای هوش مصنوعی در فرآیند تولید، خروجی‌هایی سریع، خلاقانه و در بالاترین سطح کیفی ارائه می‌دهم.
+          </p>
+
+          <h4 style="margin-top: 10px;" data-i18n="about.specialtiesTitle">زمینه‌های تخصصی:</h4>
+
+          <div class="specialties-list">
+            <div class="specialty-item">
+              <div class="specialty-icon"><i class="fa-solid fa-film"></i></div>
+              <span data-i18n="about.spec1">تدوین ویدیوهای سینمایی و تیزر تجاری</span>
+            </div>
+            <div class="specialty-item">
+              <div class="specialty-icon"><i class="fa-solid fa-cubes"></i></div>
+              <span data-i18n="about.spec2">موشن گرافیک ۲بعدی و ۳بعدی تبلیغاتی</span>
+            </div>
+            <div class="specialty-item">
+              <div class="specialty-icon"><i class="fa-solid fa-palette"></i></div>
+              <span data-i18n="about.spec3">اصلاح رنگ پیشرفته (DaVinci Resolve)</span>
+            </div>
+            <div class="specialty-item">
+              <div class="specialty-icon"><i class="fa-solid fa-vector-square"></i></div>
+              <span data-i18n="about.spec4">طراحی پوستر، کاور و هویت برند</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SKILLS SECTION
+       ========================================================================== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-tag">
+          <i class="fa-solid fa-sliders"></i>
+          <span data-i18n="skills.badge">جعبه ابزار من</span>
+        </div>
+        <h2 class="section-title" data-i18n="skills.title">نرم‌افزارها و مهارت‌های تخصصی</h2>
+        <p class="section-subtitle" data-i18n="skills.subtitle">
+          تسلط کامل بر استانداردترین ابزارهای صنعت تدوین و گرافیک برای خلق بالاترین استانداردهای بصری
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Adobe Premiere Pro -->
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-brand-icon" style="background: #ea77ff; color: #330033;">Pr</div>
+          </div>
+          <h3 class="skill-name">Adobe Premiere Pro</h3>
+          <p class="skill-category">تدوین سینمایی، کات ریتمیک، سنک صدا و ترنزیشن</p>
+        </div>
+
+        <!-- Adobe After Effects -->
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-brand-icon" style="background: #9999ff; color: #00005b;">Ae</div>
+          </div>
+          <h3 class="skill-name">Adobe After Effects</h3>
+          <p class="skill-category">موشن گرافیک، تایتل، لوگو انیمیشن و جلوه‌های ویژه</p>
+        </div>
+
+        <!-- Adobe Photoshop -->
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-brand-icon" style="background: #31a8ff; color: #001e36;">Ps</div>
+          </div>
+          <h3 class="skill-name">Adobe Photoshop</h3>
+          <p class="skill-category">طراحی پوستر، فتومونتاژ، روتوش عکس و کاورهای گرافیکی</p>
+        </div>
+
+        <!-- Adobe Illustrator -->
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-brand-icon" style="background: #ff9a00; color: #330000;">Ai</div>
+          </div>
+          <h3 class="skill-name">Adobe Illustrator</h3>
+          <p class="skill-category">طراحی وکتور، آیکون، کاراکترهای موشن و هویت بصری</p>
+        </div>
+
+        <!-- AI Creative Tools -->
+        <div class="skill-card" style="grid-column: span 1;">
+          <div class="skill-card-top">
+            <div class="skill-brand-icon" style="background: linear-gradient(135deg, #06b6d4, #a855f7); color: #fff;"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          </div>
+          <h3 class="skill-name">ابزارهای هوش مصنوعی (AI)</h3>
+          <p class="skill-category">تولید تصویر و ویدیو، ایده‌پردازی و تدوین خلاقانه با هوش مصنوعی</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PORTFOLIO SECTION
+       ========================================================================== -->
+  <section class="section" id="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-tag">
+          <i class="fa-solid fa-photo-film"></i>
+          <span data-i18n="portfolio.badge">کارهای اخیر</span>
+        </div>
+        <h2 class="section-title" data-i18n="portfolio.title">نمونه‌کارهای برگزیده</h2>
+        <p class="section-subtitle" data-i18n="portfolio.subtitle">
+          مجموعه‌ای از پروژه‌های تدوین، طراحی و موشن‌گرافیک دسته‌بندی‌شده بر اساس مدیا
+        </p>
+      </div>
+
+      <!-- Filter Buttons with 3 Media Categories (Icons Only) -->
+      <div class="portfolio-filters">
+        <button class="filter-btn active" data-filter="all" title="همه / All" aria-label="همه"><i class="fa-solid fa-border-all"></i></button>
+        <button class="filter-btn" data-filter="film" title="فیلم / Film" aria-label="فیلم"><i class="fa-solid fa-film"></i></button>
+        <button class="filter-btn" data-filter="photo" title="عکس / Photo" aria-label="عکس"><i class="fa-solid fa-camera"></i></button>
+        <button class="filter-btn" data-filter="computer" title="کامپیوتر / Computer" aria-label="کامپیوتر"><i class="fa-solid fa-desktop"></i></button>
+      </div>
+
+      <!-- Dynamic Portfolio Grid -->
+      <div class="portfolio-grid" id="portfolioGrid">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       EXPERIENCE / TIMELINE SECTION
+       ========================================================================== -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-tag">
+          <i class="fa-solid fa-briefcase"></i>
+          <span data-i18n="experience.badge">مسیر حرفه‌ای</span>
+        </div>
+        <h2 class="section-title" data-i18n="experience.title">سوابق کاری و تجربیات</h2>
+        <p class="section-subtitle" data-i18n="experience.subtitle">
+          سیر تکامل مهارت‌ها و پروژه‌های مهم در طول سال‌ها فعالیت
+        </p>
+      </div>
+
+      <div class="timeline" id="timelineContainer">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CONTACT SECTION
+       ========================================================================== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-tag">
+          <i class="fa-regular fa-comments"></i>
+          <span data-i18n="contact.badge">شروع همکاری</span>
+        </div>
+        <h2 class="section-title" data-i18n="contact.title">بیایید با هم اثری شگفت‌انگیز خلق کنیم</h2>
+        <p class="section-subtitle" data-i18n="contact.subtitle">
+          ایده، تیزر، ویدیو یا پروژه‌ای در ذهن دارید؟ برای استعلام قیمت یا شروع همکاری پیام بفرستید.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info Card -->
+        <div class="contact-info-card">
+          <div>
+            <h3 data-i18n="contact.infoTitle">اطلاعات تماس مستقیم</h3>
+            
+            <div class="contact-info-list">
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fa-regular fa-envelope"></i></div>
+                <div class="contact-detail">
+                  <h6 data-i18n="contact.email">ایمیل:</h6>
+                  <a href="mailto:xashiwork@gmail.com">xashiwork@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                <div class="contact-detail">
+                  <h6 data-i18n="contact.phone">تلفن / واتساپ:</h6>
+                  <a href="https://wa.me/989351289395" target="_blank" dir="ltr">0935 128 9395</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fa-brands fa-telegram"></i></div>
+                <div class="contact-detail">
+                  <h6 data-i18n="contact.telegram">تلگرام:</h6>
+                  <a href="https://t.me/xashiap" target="_blank" dir="ltr">@xashiap</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://instagram.com/xashi_" target="_blank" class="social-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://t.me/xashiap" target="_blank" class="social-link" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+            <a href="https://wa.me/989351289395" target="_blank" class="social-link" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="mailto:xashiwork@gmail.com" class="social-link" title="Email"><i class="fa-regular fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label class="form-label" for="userName" data-i18n="contact.formName">نام و نام خانوادگی</label>
+            <input type="text" id="userName" class="form-input" required placeholder="مثال: علی رضایی">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="userEmail" data-i18n="contact.formEmail">آدرس ایمیل</label>
+            <input type="email" id="userEmail" class="form-input" required placeholder="example@domain.com">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="userService" data-i18n="contact.formService">نوع پروژه / خدمات</label>
+            <select id="userService" class="form-select" required>
+              <option value="" disabled selected data-i18n="contact.formServiceSelect">انتخاب نوع خدمات...</option>
+              <option value="motion" data-i18n="contact.optMotion">موشن گرافیک</option>
+              <option value="video" data-i18n="contact.optVideo">تدوین ویدیو و تیزر</option>
+              <option value="design" data-i18n="contact.optDesign">طراحی گرافیک و پوستر</option>
+              <option value="other" data-i18n="contact.optOther">سایر موارد</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="userMessage" data-i18n="contact.formMessage">توضیحات پروژه</label>
+            <textarea id="userMessage" class="form-textarea" required placeholder="ایده، اهداف و جزئیات پروژه خود را بنویسید..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="formSubmitBtn">
+            <i class="fa-regular fa-paper-plane"></i>
+            <span data-i18n="contact.formSubmit">ارسال پیام</span>
+          </button>
+
+          <div class="form-feedback" id="formFeedback"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="logo">
+        <div class="logo-icon"><i class="fa-solid fa-film"></i></div>
+        <span class="logo-text"><span class="gradient-text">خشایار</span> آذرپیرا</span>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://instagram.com/xashi_" target="_blank" class="social-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://t.me/xashiap" target="_blank" class="social-link" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+        <a href="https://wa.me/989351289395" target="_blank" class="social-link" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="mailto:xashiwork@gmail.com" class="social-link" title="Email"><i class="fa-regular fa-envelope"></i></a>
+      </div>
+
+      <p class="footer-copy">
+        &copy; <span id="currentYear"></span> <span data-i18n="footer.rights">تمامی حقوق برای خشایار آذرپیرا محفوظ است.</span> | <span data-i18n="footer.designedWith">خلق شده با تمرکز بر هنر تصویر، ریتم و تدوین</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL / LIGHTBOX VIEWER
+       ========================================================================== -->
+  <div class="modal-backdrop" id="projectModal">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-media-wrapper" id="modalMediaContainer">
+        <!-- Injected dynamically: Video or Image -->
+      </div>
+
+      <div class="modal-body">
+        <div class="project-client" id="modalClient">Client Name</div>
+        <h3 class="modal-title" id="modalTitle">Project Title</h3>
+        <p class="modal-desc" id="modalDesc">Project description and story...</p>
+        <div class="modal-meta">
+          <div class="project-tools" id="modalTools">
+            <!-- Tool chips -->
+          </div>
+          <div style="font-size: 0.85rem; color: var(--text-muted);" id="modalDate">2025</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
