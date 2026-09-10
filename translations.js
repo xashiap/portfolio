@@ -47,7 +47,13 @@ const translations = {
         motion: "موشن گرافیک",
         design: "طراحی گرافیک",
         ai: "هوش مصنوعی"
-      }
+      },
+      prDesc: "تدوین سینمایی، کات ریتمیک، سنک صدا و ترنزیشن",
+      aeDesc: "موشن گرافیک، تایتل، لوگو انیمیشن و جلوه‌های ویژه",
+      psDesc: "طراحی پوستر، فتومونتاژ، روتوش عکس و کاورهای گرافیکی",
+      aiDesc: "طراحی وکتور، آیکون، کاراکترهای موشن و هویت بصری",
+      aiTitle: "ابزارهای هوش مصنوعی (AI)",
+      aiDescTool: "تولید تصویر و ویدیو، ایده‌پردازی و تدوین خلاقانه با هوش مصنوعی"
     },
     portfolio: {
       badge: "کارهای اخیر",
@@ -141,7 +147,13 @@ const translations = {
         motion: "Motion Graphics",
         design: "Graphic Design",
         ai: "AI Tools"
-      }
+      },
+      prDesc: "Cinematic Editing, Beat Sync, Sound Design & Transitions",
+      aeDesc: "Motion Graphics, Title Sequences, Logo Stings & VFX",
+      psDesc: "Poster Design, Photo Manipulation, Retouching & Key Visuals",
+      aiDesc: "Vector Illustration, Iconography, Motion Assets & Identity",
+      aiTitle: "AI Creative Tools",
+      aiDescTool: "Generative Video & Image Synthesis, Prompt Crafting & Creative Ideation"
     },
     portfolio: {
       badge: "Selected Projects",
