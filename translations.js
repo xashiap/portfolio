@@ -92,7 +92,10 @@ const translations = {
       formMessage: "توضیحات پروژه",
       formSubmit: "ارسال پیام",
       sending: "در حال ارسال...",
-      sentSuccess: "پیام شما با موفقیت ثبت شد! به زودی با شما تماس خواهم گرفت."
+      sentSuccess: "پیام شما با موفقیت به تلگرام خشایار ارسال شد! به زودی پاسخ داده خواهد شد.",
+      sentError: "ارتباط با تلگرام برقرار نشد (احتمالاً به دلیل فعال نبودن فیلترشکن). می‌توانید مستقیماً از دکمه‌های زیر پیام را ارسال کنید:",
+      btnTelegram: "ارسال در تلگرام",
+      btnWhatsapp: "ارسال در واتساپ"
     },
     footer: {
       rights: "تمامی حقوق برای خشایار آذرپیرا محفوظ است.",
@@ -192,7 +195,10 @@ const translations = {
       formMessage: "Project Details",
       formSubmit: "Send Message",
       sending: "Sending...",
-      sentSuccess: "Your message has been sent! I'll get back to you shortly."
+      sentSuccess: "Your message has been sent directly to Khashayar on Telegram! I'll get back to you shortly.",
+      sentError: "Could not reach Telegram directly. You can send your message directly via Telegram or WhatsApp below:",
+      btnTelegram: "Send via Telegram",
+      btnWhatsapp: "Send via WhatsApp"
     },
     footer: {
       rights: "All rights reserved.",
