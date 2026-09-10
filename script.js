@@ -95,6 +95,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+    // Update Logo text based on language
+    document.querySelectorAll('.logo-text').forEach(lt => {
+      lt.innerHTML = lang === 'fa' 
+        ? '<span class="gradient-text">خشایار</span> آذرپیرا' 
+        : '<span class="gradient-text">Khashayar</span> Azarpira';
+    });
+
     // Update Form Placeholders based on language
     const nameInput = document.getElementById('userName');
     const emailInput = document.getElementById('userEmail');
