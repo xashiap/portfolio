@@ -6,6 +6,7 @@ const translations = {
       skills: "مهارت‌ها",
       portfolio: "نمونه‌کارها",
       experience: "سوابق",
+      testimonials: "نظرات",
       contact: "تماس",
       showreel: "شو ریل"
     },
@@ -71,6 +72,15 @@ const translations = {
       title: "سوابق کاری و تجربیات",
       subtitle: "سیر تکامل مهارت‌ها و پروژه‌های مهم در طول سال‌ها فعالیت"
     },
+    testimonials: {
+      badge: "نظرات و همکاری‌ها",
+      title: "تجربه همکاری با برندها و کارفرمایان",
+      subtitle: "بازخورد تیم‌ها و کارفرمایانی که در خلق تیزرها و محتوای بصری افتخار همکاری با آن‌ها را داشته‌ام"
+    },
+    likeWidget: {
+      btnTitle: "پسندیدن و ارسال انرژی",
+      likedText: "ممنون از حمایت و انرژی شما! ❤️"
+    },
     contact: {
       badge: "شروع همکاری",
       title: "بیایید با هم اثری شگفت‌انگیز خلق کنیم",
@@ -109,6 +119,7 @@ const translations = {
       skills: "Skills",
       portfolio: "Portfolio",
       experience: "Experience",
+      testimonials: "Reviews",
       contact: "Contact",
       showreel: "Showreel"
     },
@@ -173,6 +184,15 @@ const translations = {
       badge: "Career Path",
       title: "Experience & Timeline",
       subtitle: "Track record of agency positions and independent freelance productions"
+    },
+    testimonials: {
+      badge: "Client Feedback",
+      title: "What Clients & Brands Say",
+      subtitle: "Feedback from creative studios, brands, and creators I've had the pleasure of collaborating with"
+    },
+    likeWidget: {
+      btnTitle: "Like & Send Love",
+      likedText: "Thanks for the support and love! ❤️"
     },
     contact: {
       badge: "Let's Collaborate",
@@ -365,3 +385,112 @@ const timelineData = [
     }
   }
 ];
+
+const testimonialsData = [
+  {
+    id: 1,
+    name: {
+      fa: "مهدی فراهانی",
+      en: "Mehdi Farahani"
+    },
+    role: {
+      fa: "مدیر مارکتینگ و تولید محتوا",
+      en: "Marketing & Content Director"
+    },
+    brand: {
+      fa: "استودیو خلاق متانو",
+      en: "Metano Studio"
+    },
+    brandIcon: "fa-solid fa-layer-group",
+    rating: 5,
+    comment: {
+      fa: "دقت خشایار در ریتم تدوین، انتخاب موزیک و اصلاح رنگ پروژه‌ها بی‌نظیره. تیزرهای تبلیغاتی ما همیشه فراتر از انتظار و بسیار حرفه‌ای تحویل داده شدند.",
+      en: "Khashayar's precision in edit rhythm, soundtrack selection, and color grading is unmatched. Our promotional reels always exceeded client expectations."
+    }
+  },
+  {
+    id: 2,
+    name: {
+      fa: "مهندس علیرضا سلیمانی",
+      en: "Alireza Soleimani"
+    },
+    role: {
+      fa: "مدیر برندینگ و روابط عمومی",
+      en: "PR & Branding Manager"
+    },
+    brand: {
+      fa: "هلدینگ ساختمانی هوتن",
+      en: "Hootan Builders"
+    },
+    brandIcon: "fa-solid fa-building",
+    rating: 5,
+    comment: {
+      fa: "ویدیوهای معرفی پروژه‌ها و مستندهای ساختمانی با موشن گرافیک‌های تمیز و ادیت مدرن اجرا شد. خوش‌قولی و درک سریع سناریو نقطه قوت همکاری با خشایار بود.",
+      en: "Our architectural showcase videos were delivered with clean motion graphics and sharp pacing. Professionalism and quick turnaround made collaboration effortless."
+    }
+  },
+  {
+    id: 3,
+    name: {
+      fa: "سارا نیکنام",
+      en: "Sara Niknam"
+    },
+    role: {
+      fa: "کارگردان هنری کمپین‌ها",
+      en: "Campaign Art Director"
+    },
+    brand: {
+      fa: "آژانس خلاق رایا",
+      en: "Raya Creative Agency"
+    },
+    brandIcon: "fa-solid fa-bullhorn",
+    rating: 5,
+    comment: {
+      fa: "تسلط فوق‌العاده بر افترافکت و ترنزیشن‌های دینامیک. وقتی پروژه‌ای با زمان فشرده داریم، خشایار اولین انتخابی است که با خیال راحت کار رو بهش می‌سپاریم.",
+      en: "Exceptional mastery of After Effects and dynamic transitions. Whenever we are on tight deadlines, Khashayar is our go-to creative partner."
+    }
+  },
+  {
+    id: 4,
+    name: {
+      fa: "کامران دادخواه",
+      en: "Kamran Dadkhah"
+    },
+    role: {
+      fa: "مدیر محصول و مارکتینگ",
+      en: "Product & Growth Lead"
+    },
+    brand: {
+      fa: "استارتاپ دیجیتال مدیاهاب",
+      en: "MediaHub Startup"
+    },
+    brandIcon: "fa-solid fa-rocket",
+    rating: 5,
+    comment: {
+      fa: "تلفیق ایده‌پردازی هوش مصنوعی با تدوین حرفه‌ای باعث شد ویدیوی رونمایی محصول ما بازخورد فوق‌العاده و نرخ تبدیل بالایی داشته باشه.",
+      en: "Blending AI-assisted concepts with polished editing gave our product launch video great traction and strong social engagement."
+    }
+  },
+  {
+    id: 5,
+    name: {
+      fa: "امیرحسین رضوی",
+      en: "Amirhossein Razavi"
+    },
+    role: {
+      fa: "تولیدکننده محتوا و یوتیوبر",
+      en: "Content Creator"
+    },
+    brand: {
+      fa: "رسانه تک‌فلو",
+      en: "TechFlow Media"
+    },
+    brandIcon: "fa-solid fa-play",
+    rating: 5,
+    comment: {
+      fa: "کات‌های سرضرب، تایتل‌های خلاقانه و سنک بی‌نقص صدا باعث شد واچ‌تایم ویدیوهای ما جهش چشمگیری داشته باشه. کیفیت کار واقعاً درجه‌یکه.",
+      en: "Punchy cuts, engaging kinetic typography, and seamless audio sync significantly improved our audience retention. Top-tier production quality."
+    }
+  }
+];
+
