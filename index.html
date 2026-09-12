@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=2.1">
+  <link rel="stylesheet" href="style.css?v=4.0">
 </head>
 <body>
 
@@ -42,6 +42,7 @@
         <li><a href="#skills" class="nav-link" data-i18n="nav.skills">مهارت‌ها</a></li>
         <li><a href="#portfolio" class="nav-link" data-i18n="nav.portfolio">نمونه‌کارها</a></li>
         <li><a href="#experience" class="nav-link" data-i18n="nav.experience">سوابق</a></li>
+        <li><a href="#testimonials" class="nav-link" data-i18n="nav.testimonials">نظرات</a></li>
         <li><a href="#contact" class="nav-link" data-i18n="nav.contact">تماس</a></li>
       </ul>
 
@@ -340,6 +341,31 @@
   </section>
 
   <!-- ==========================================================================
+       TESTIMONIALS & BRANDS SECTION
+       ========================================================================== -->
+  <section class="section testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-tag">
+          <i class="fa-solid fa-star"></i>
+          <span data-i18n="testimonials.badge">نظرات و همکاری‌ها</span>
+        </div>
+        <h2 class="section-title" data-i18n="testimonials.title">تجربه همکاری با برندها و کارفرمایان</h2>
+        <p class="section-subtitle" data-i18n="testimonials.subtitle">
+          بازخورد تیم‌ها و کارفرمایانی که در خلق تیزرها و محتوای بصری افتخار همکاری با آن‌ها را داشته‌ام
+        </p>
+      </div>
+    </div>
+
+    <!-- Infinite Carousel / Marquee Container -->
+    <div class="testimonials-marquee-wrapper" id="testimonialsWrapper">
+      <div class="testimonials-track" id="testimonialsTrack">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
        CONTACT SECTION
        ========================================================================== -->
   <section class="section" id="contact">
@@ -485,8 +511,24 @@
     </div>
   </div>
 
+  <!-- ==========================================================================
+       FLOATING LIKE WIDGET (Bottom-Left)
+       ========================================================================== -->
+  <div class="floating-like-widget" id="floatingLikeWidget">
+    <button class="like-btn" id="likeBtn" aria-label="پسندیدن پورتفولیو" title="پسندیدن و ارسال انرژی">
+      <div class="like-icon-wrap">
+        <i class="fa-solid fa-heart like-heart"></i>
+      </div>
+      <span class="like-counter" id="likeCounter">148</span>
+    </button>
+    <div class="like-feedback-tooltip" id="likeFeedbackTooltip">
+      ممنون از حمایت و انرژی شما! ❤️
+    </div>
+    <div class="like-particles-container" id="likeParticles"></div>
+  </div>
+
   <!-- Scripts with cache buster -->
-  <script src="translations.js?v=3.0"></script>
-  <script src="script.js?v=3.0"></script>
+  <script src="translations.js?v=4.0"></script>
+  <script src="script.js?v=4.0"></script>
 </body>
 </html>
