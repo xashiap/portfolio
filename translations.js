@@ -389,38 +389,13 @@ const timelineData = [
 const testimonialsData = [
   {
     id: 1,
-    name: {
-      fa: "مهدی فراهانی",
-      en: "Mehdi Farahani"
-    },
-    role: {
-      fa: "مدیر مارکتینگ و تولید محتوا",
-      en: "Marketing & Content Director"
-    },
-    brand: {
-      fa: "استودیو خلاق متانو",
-      en: "Metano Studio"
-    },
-    brandIcon: "fa-solid fa-layer-group",
-    rating: 5,
-    comment: {
-      fa: "دقت خشایار در ریتم تدوین، انتخاب موزیک و اصلاح رنگ پروژه‌ها بی‌نظیره. تیزرهای تبلیغاتی ما همیشه فراتر از انتظار و بسیار حرفه‌ای تحویل داده شدند.",
-      en: "Khashayar's precision in edit rhythm, soundtrack selection, and color grading is unmatched. Our promotional reels always exceeded client expectations."
-    }
-  },
-  {
-    id: 2,
-    name: {
-      fa: "مهندس علیرضا سلیمانی",
-      en: "Alireza Soleimani"
-    },
-    role: {
-      fa: "مدیر برندینگ و روابط عمومی",
-      en: "PR & Branding Manager"
-    },
     brand: {
       fa: "هلدینگ ساختمانی هوتن",
-      en: "Hootan Builders"
+      en: "Hootan Builders Holding"
+    },
+    category: {
+      fa: "عمران، معماری و مستندسازی پروژه‌ها",
+      en: "Real Estate & Architecture Showcase"
     },
     brandIcon: "fa-solid fa-building",
     rating: 5,
@@ -430,66 +405,71 @@ const testimonialsData = [
     }
   },
   {
-    id: 3,
-    name: {
-      fa: "سارا نیکنام",
-      en: "Sara Niknam"
-    },
-    role: {
-      fa: "کارگردان هنری کمپین‌ها",
-      en: "Campaign Art Director"
-    },
+    id: 2,
     brand: {
       fa: "آژانس خلاق رایا",
       en: "Raya Creative Agency"
     },
+    category: {
+      fa: "کمپین‌های دیجیتال و تیزرهای تبلیغاتی",
+      en: "Digital Campaigns & Commercials"
+    },
     brandIcon: "fa-solid fa-bullhorn",
     rating: 5,
     comment: {
-      fa: "تسلط فوق‌العاده بر افترافکت و ترنزیشن‌های دینامیک. وقتی پروژه‌ای با زمان فشرده داریم، خشایار اولین انتخابی است که با خیال راحت کار رو بهش می‌سپاریم.",
-      en: "Exceptional mastery of After Effects and dynamic transitions. Whenever we are on tight deadlines, Khashayar is our go-to creative partner."
+      fa: "تسلط فوق‌العاده بر افترافکت، اصلاح رنگ و ترنزیشن‌های دینامیک. وقتی پروژه‌ای با زمان فشرده داریم، خشایار اولین انتخابی است که با خیال راحت کار رو بهش می‌سپاریم.",
+      en: "Exceptional mastery of After Effects, color grading, and dynamic transitions. In fast-turnaround campaigns, Khashayar is our team's most trusted partner."
     }
   },
   {
-    id: 4,
-    name: {
-      fa: "کامران دادخواه",
-      en: "Kamran Dadkhah"
-    },
-    role: {
-      fa: "مدیر محصول و مارکتینگ",
-      en: "Product & Growth Lead"
-    },
+    id: 3,
     brand: {
       fa: "استارتاپ دیجیتال مدیاهاب",
-      en: "MediaHub Startup"
+      en: "MediaHub Digital"
+    },
+    category: {
+      fa: "تولید محتوا و پلتفرم رسانه‌ای",
+      en: "Content Production & Media Platform"
     },
     brandIcon: "fa-solid fa-rocket",
     rating: 5,
     comment: {
-      fa: "تلفیق ایده‌پردازی هوش مصنوعی با تدوین حرفه‌ای باعث شد ویدیوی رونمایی محصول ما بازخورد فوق‌العاده و نرخ تبدیل بالایی داشته باشه.",
+      fa: "تلفیق ایده‌پردازی هوش مصنوعی با تدوین حرفه‌ای باعث شد ویدیوی رونمایی محصول ما بازخورد فوق‌العاده و نرخ تبدیل بالایی در فضای مجازی داشته باشه.",
       en: "Blending AI-assisted concepts with polished editing gave our product launch video great traction and strong social engagement."
     }
   },
   {
-    id: 5,
-    name: {
-      fa: "امیرحسین رضوی",
-      en: "Amirhossein Razavi"
-    },
-    role: {
-      fa: "تولیدکننده محتوا و یوتیوبر",
-      en: "Content Creator"
-    },
+    id: 4,
     brand: {
-      fa: "رسانه تک‌فلو",
+      fa: "رسانه ویدیو و تکنولوژی تک‌فلو",
       en: "TechFlow Media"
+    },
+    category: {
+      fa: "تولید محتوای یوتیوب و شبکه‌های اجتماعی",
+      en: "YouTube & Tech Video Production"
     },
     brandIcon: "fa-solid fa-play",
     rating: 5,
     comment: {
       fa: "کات‌های سرضرب، تایتل‌های خلاقانه و سنک بی‌نقص صدا باعث شد واچ‌تایم ویدیوهای ما جهش چشمگیری داشته باشه. کیفیت کار واقعاً درجه‌یکه.",
       en: "Punchy cuts, engaging kinetic typography, and seamless audio sync significantly improved our audience retention. Top-tier production quality."
+    }
+  },
+  {
+    id: 5,
+    brand: {
+      fa: "استودیو سینمایی و موشن کات‌آپ",
+      en: "CutUp Motion Studio"
+    },
+    category: {
+      fa: "استودیو پس‌تولید و جلوه‌های بصری",
+      en: "Post-Production & Visual Effects"
+    },
+    brandIcon: "fa-solid fa-wand-magic-sparkles",
+    rating: 5,
+    comment: {
+      fa: "دقت به جزئیات صداگذاری، ریتم سینمایی و تحویل منظم فایل‌ها با استانداردهای پخش، همکاری با خشایار رو به تجربه‌ای بسیار حرفه‌ای و بی‌دغدغه تبدیل کرده.",
+      en: "Attention to audio detail, cinematic pacing, and broadcast-ready deliverables make collaborating with Khashayar truly professional."
     }
   }
 ];
