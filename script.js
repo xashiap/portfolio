@@ -119,9 +119,11 @@ document.addEventListener('DOMContentLoaded', () => {
         : 'Describe your project vision, timeline, and deliverables...';
     }
 
-    // Re-render dynamic portfolio & timeline
+    // Re-render dynamic portfolio, timeline & testimonials
     renderPortfolio(currentFilter);
     renderTimeline();
+    renderTestimonials();
+    updateLikeWidgetTexts();
     applyTheme(currentTheme); // refresh theme tooltips
   }
 
@@ -216,6 +218,58 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
 
       timelineContainer.appendChild(itemElem);
+    });
+  }
+
+  /* --------------------------------------------------------------------------
+     TESTIMONIALS & BRANDS CAROUSEL
+     -------------------------------------------------------------------------- */
+  const testimonialsTrack = document.getElementById('testimonialsTrack');
+
+  function renderTestimonials() {
+    if (!testimonialsTrack || typeof testimonialsData === 'undefined') return;
+    testimonialsTrack.innerHTML = '';
+
+    // Duplicate list to achieve continuous seamless marquee loop
+    const duplicated = testimonialsData.concat(testimonialsData);
+
+    duplicated.forEach((t) => {
+      const card = document.createElement('div');
+      card.className = 'testimonial-card';
+
+      // Stars
+      let starsHtml = '';
+      for (let i = 0; i < (t.rating || 5); i++) {
+        starsHtml += '<i class="fa-solid fa-star"></i>';
+      }
+
+      card.innerHTML = `
+        <div class="testimonial-top">
+          <div class="testimonial-brand-badge">
+            <i class="${t.brandIcon || 'fa-solid fa-briefcase'}"></i>
+            <span>${t.brand[currentLang]}</span>
+          </div>
+          <div class="testimonial-stars">
+            ${starsHtml}
+          </div>
+        </div>
+
+        <p class="testimonial-comment">
+          «${t.comment[currentLang]}»
+        </p>
+
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">
+            <i class="${t.brandIcon || 'fa-solid fa-user'}"></i>
+          </div>
+          <div class="testimonial-info">
+            <h4>${t.name[currentLang]}</h4>
+            <p>${t.role[currentLang]}</p>
+          </div>
+        </div>
+      `;
+
+      testimonialsTrack.appendChild(card);
     });
   }
 
@@ -453,6 +507,93 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  /* --------------------------------------------------------------------------
+     FLOATING LIKE WIDGET (Bottom-Left)
+     -------------------------------------------------------------------------- */
+  const likeBtn = document.getElementById('likeBtn');
+  const likeCounter = document.getElementById('likeCounter');
+  const likeFeedbackTooltip = document.getElementById('likeFeedbackTooltip');
+  const likeParticles = document.getElementById('likeParticles');
+
+  const BASE_LIKES = 148;
+  let currentLikes = parseInt(localStorage.getItem('portfolio_likes_count'), 10) || BASE_LIKES;
+  let hasLiked = localStorage.getItem('portfolio_has_liked') === 'true';
+  let tooltipTimeout = null;
+
+  function updateLikeWidgetTexts() {
+    if (!likeBtn) return;
+    const title = translations[currentLang]?.likeWidget?.btnTitle || 'Like';
+    const tooltipText = translations[currentLang]?.likeWidget?.likedText || 'Thanks! ❤️';
+    likeBtn.setAttribute('title', title);
+    likeBtn.setAttribute('aria-label', title);
+    if (likeFeedbackTooltip) {
+      likeFeedbackTooltip.textContent = tooltipText;
+    }
+  }
+
+  function spawnLikeParticles() {
+    if (!likeParticles) return;
+    const icons = ['❤️', '✨', '💖', '🔥', '🎬'];
+    for (let i = 0; i < 7; i++) {
+      const p = document.createElement('span');
+      p.className = 'like-particle';
+      p.textContent = icons[Math.floor(Math.random() * icons.length)];
+      
+      const dx = (Math.random() * 80 - 40) + 'px';
+      const rot = (Math.random() * 60 - 30) + 'deg';
+      p.style.setProperty('--dx', dx);
+      p.style.setProperty('--rot', rot);
+      p.style.left = (Math.random() * 20 - 10) + 'px';
+      p.style.top = (Math.random() * 10 - 5) + 'px';
+      
+      likeParticles.appendChild(p);
+      setTimeout(() => p.remove(), 1200);
+    }
+  }
+
+  function initLikeWidget() {
+    if (!likeBtn || !likeCounter) return;
+
+    likeCounter.textContent = currentLikes;
+    if (hasLiked) {
+      likeBtn.classList.add('liked');
+    }
+
+    likeBtn.addEventListener('click', () => {
+      // Increment like count
+      currentLikes++;
+      localStorage.setItem('portfolio_likes_count', currentLikes);
+      localStorage.setItem('portfolio_has_liked', 'true');
+      likeCounter.textContent = currentLikes;
+      likeBtn.classList.add('liked');
+
+      // Heart bounce animation
+      const heart = likeBtn.querySelector('.like-heart');
+      if (heart) {
+        heart.classList.remove('heart-pop');
+        void heart.offsetWidth; // force reflow
+        heart.classList.add('heart-pop');
+      }
+
+      // Spawn burst particles
+      spawnLikeParticles();
+
+      // Show tooltip
+      if (likeFeedbackTooltip) {
+        likeFeedbackTooltip.classList.add('show');
+        clearTimeout(tooltipTimeout);
+        tooltipTimeout = setTimeout(() => {
+          likeFeedbackTooltip.classList.remove('show');
+        }, 3000);
+      }
+    });
+
+    updateLikeWidgetTexts();
+  }
+
+  // Initialize Like Widget
+  initLikeWidget();
 
   // Initialize Language
   applyLanguage(currentLang);
