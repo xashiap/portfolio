@@ -1950,10 +1950,16 @@ html[dir="rtl"] .testimonials-track {
 
 .like-particle {
   position: absolute;
-  color: #f43f5e;
-  font-size: 1.1rem;
   user-select: none;
-  animation: floatHeart 1.2s ease-out forwards;
+  animation: floatHeart 1.3s ease-out forwards;
+}
+
+.apple-emoji-particle {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
 }
 
 @keyframes floatHeart {
