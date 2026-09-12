@@ -1678,3 +1678,317 @@ html[dir="rtl"] .modal-close-btn {
     display: none !important;
   }
 }
+
+/* ==========================================================================
+   TESTIMONIALS & BRANDS SECTION
+   ========================================================================== */
+.testimonials-section {
+  overflow: hidden;
+  position: relative;
+  padding: 80px 0 100px;
+}
+
+.testimonials-marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 24px 0;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.testimonials-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: scrollTestimonials 42s linear infinite;
+  will-change: transform;
+}
+
+/* Pause on hover */
+.testimonials-marquee-wrapper:hover .testimonials-track {
+  animation-play-state: paused;
+}
+
+/* Direction aware scrolling */
+html[dir="rtl"] .testimonials-track {
+  animation-name: scrollTestimonialsRTL;
+}
+
+@keyframes scrollTestimonials {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scrollTestimonialsRTL {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50%); }
+}
+
+.testimonial-card {
+  width: 380px;
+  min-width: 380px;
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+  border-radius: 22px;
+  padding: 26px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  transition: transform var(--transition-normal), border-color var(--transition-normal), box-shadow var(--transition-normal);
+  position: relative;
+  user-select: none;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-highlight);
+  box-shadow: 0 16px 35px -10px rgba(99, 102, 241, 0.25);
+}
+
+.testimonial-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.testimonial-brand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: var(--bg-badge);
+  border: 1px solid var(--border-highlight);
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.testimonial-stars {
+  display: flex;
+  gap: 3px;
+  color: #f59e0b;
+  font-size: 0.85rem;
+}
+
+.testimonial-comment {
+  font-size: 0.94rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  position: relative;
+  flex-grow: 1;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-color);
+}
+
+.testimonial-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.testimonial-info h4 {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.testimonial-info p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   FLOATING LIKE WIDGET (Bottom-Left)
+   ========================================================================== */
+.floating-like-widget {
+  position: fixed;
+  bottom: 26px;
+  left: 26px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.like-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px 8px 10px;
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-color);
+  border-radius: 9999px;
+  box-shadow: var(--shadow-lg), 0 4px 20px rgba(244, 63, 94, 0.15);
+  cursor: pointer;
+  color: var(--text-primary);
+  font-family: inherit;
+  transition: all var(--transition-normal);
+  position: relative;
+  outline: none;
+}
+
+.like-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  border-color: rgba(244, 63, 94, 0.5);
+  box-shadow: var(--shadow-lg), 0 8px 25px rgba(244, 63, 94, 0.3);
+}
+
+.like-btn:active {
+  transform: translateY(-1px) scale(0.97);
+}
+
+.like-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(244, 63, 94, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f43f5e;
+  font-size: 1.05rem;
+  transition: all var(--transition-normal);
+}
+
+.like-btn:hover .like-icon-wrap {
+  background: #f43f5e;
+  color: #ffffff;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(244, 63, 94, 0.6);
+}
+
+.like-btn.liked .like-icon-wrap {
+  background: linear-gradient(135deg, #f43f5e, #fb7185);
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(244, 63, 94, 0.7);
+}
+
+.like-btn.liked {
+  border-color: rgba(244, 63, 94, 0.6);
+}
+
+.like-heart {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.like-heart.heart-pop {
+  animation: heartBounce 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes heartBounce {
+  0% { transform: scale(1); }
+  35% { transform: scale(1.5) rotate(-15deg); }
+  65% { transform: scale(0.9) rotate(8deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+.like-counter {
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  color: var(--text-primary);
+  min-width: 24px;
+}
+
+/* Tooltip */
+.like-feedback-tooltip {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 0;
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-highlight);
+  border-radius: var(--radius-md);
+  padding: 8px 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.like-feedback-tooltip.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Floating heart particles */
+.like-particles-container {
+  position: absolute;
+  top: 0;
+  left: 18px;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.like-particle {
+  position: absolute;
+  color: #f43f5e;
+  font-size: 1.1rem;
+  user-select: none;
+  animation: floatHeart 1.2s ease-out forwards;
+}
+
+@keyframes floatHeart {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(0.6) rotate(0deg);
+  }
+  50% {
+    opacity: 0.9;
+    transform: translate(var(--dx), -45px) scale(1.2) rotate(var(--rot));
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(var(--dx) * 1.5), -90px) scale(0.8) rotate(calc(var(--rot) * 2));
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    width: 310px;
+    min-width: 310px;
+    padding: 20px 22px;
+  }
+  .floating-like-widget {
+    bottom: 18px;
+    left: 18px;
+  }
+  .like-btn {
+    padding: 6px 14px 6px 8px;
+    gap: 8px;
+  }
+  .like-icon-wrap {
+    width: 32px;
+    height: 32px;
+    font-size: 0.95rem;
+  }
+}
+
