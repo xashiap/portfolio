@@ -246,8 +246,8 @@ document.addEventListener('DOMContentLoaded', () => {
       card.innerHTML = `
         <div class="testimonial-top">
           <div class="testimonial-brand-badge">
-            <i class="${t.brandIcon || 'fa-solid fa-briefcase'}"></i>
-            <span>${t.brand[currentLang]}</span>
+            <i class="fa-solid fa-circle-check"></i>
+            <span>${currentLang === 'fa' ? 'همکاری تایید شده' : 'Verified Client'}</span>
           </div>
           <div class="testimonial-stars">
             ${starsHtml}
@@ -260,11 +260,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <div class="testimonial-author">
           <div class="testimonial-avatar">
-            <i class="${t.brandIcon || 'fa-solid fa-user'}"></i>
+            <i class="${t.brandIcon || 'fa-solid fa-building'}"></i>
           </div>
           <div class="testimonial-info">
-            <h4>${t.name[currentLang]}</h4>
-            <p>${t.role[currentLang]}</p>
+            <h4>${t.brand[currentLang]}</h4>
+            <p>${t.category[currentLang]}</p>
           </div>
         </div>
       `;
