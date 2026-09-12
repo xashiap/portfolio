@@ -532,23 +532,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  const appleEmojis = [
+    'images/emojis/apple-heart.png',
+    'images/emojis/apple-fire.png',
+    'images/emojis/apple-sparkles.png',
+    'images/emojis/apple-heart-sparkle.png',
+    'images/emojis/apple-clapper.png',
+    'images/emojis/apple-love-face.png',
+    'images/emojis/apple-party.png'
+  ];
+
   function spawnLikeParticles() {
     if (!likeParticles) return;
-    const icons = ['❤️', '✨', '💖', '🔥', '🎬'];
-    for (let i = 0; i < 7; i++) {
-      const p = document.createElement('span');
-      p.className = 'like-particle';
-      p.textContent = icons[Math.floor(Math.random() * icons.length)];
-      
-      const dx = (Math.random() * 80 - 40) + 'px';
-      const rot = (Math.random() * 60 - 30) + 'deg';
-      p.style.setProperty('--dx', dx);
-      p.style.setProperty('--rot', rot);
-      p.style.left = (Math.random() * 20 - 10) + 'px';
-      p.style.top = (Math.random() * 10 - 5) + 'px';
-      
-      likeParticles.appendChild(p);
-      setTimeout(() => p.remove(), 1200);
+    for (let i = 0; i < 8; i++) {
+      const img = document.createElement('img');
+      img.className = 'like-particle apple-emoji-particle';
+      img.src = appleEmojis[Math.floor(Math.random() * appleEmojis.length)];
+      img.alt = 'iOS Emoji';
+
+      const dx = (Math.random() * 100 - 50) + 'px';
+      const rot = (Math.random() * 50 - 25) + 'deg';
+      img.style.setProperty('--dx', dx);
+      img.style.setProperty('--rot', rot);
+      img.style.left = (Math.random() * 24 - 12) + 'px';
+      img.style.top = (Math.random() * 12 - 6) + 'px';
+
+      likeParticles.appendChild(img);
+      setTimeout(() => img.remove(), 1300);
     }
   }
 
