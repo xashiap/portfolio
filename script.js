@@ -516,10 +516,45 @@ document.addEventListener('DOMContentLoaded', () => {
   const likeFeedbackTooltip = document.getElementById('likeFeedbackTooltip');
   const likeParticles = document.getElementById('likeParticles');
 
-  const BASE_LIKES = 148;
+  const CLOUD_LIKES_URL = 'https://api.restful-api.dev/objects/ff808181a067127101a094d46b490044';
+  const BASE_LIKES = 204;
   let currentLikes = parseInt(localStorage.getItem('portfolio_likes_count'), 10) || BASE_LIKES;
   let hasLiked = localStorage.getItem('portfolio_has_liked') === 'true';
   let tooltipTimeout = null;
+
+  async function syncLikesFromCloud() {
+    try {
+      const resp = await fetch(CLOUD_LIKES_URL);
+      if (resp.ok) {
+        const json = await resp.json();
+        const cloudCount = json?.data?.likes;
+        if (typeof cloudCount === 'number' && cloudCount > 0) {
+          if (cloudCount >= currentLikes) {
+            currentLikes = cloudCount;
+            if (likeCounter) likeCounter.textContent = currentLikes;
+            localStorage.setItem('portfolio_likes_count', currentLikes);
+          }
+        }
+      }
+    } catch (e) {
+      // Graceful offline fallback
+    }
+  }
+
+  async function syncLikesToCloud(count) {
+    try {
+      await fetch(CLOUD_LIKES_URL, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: 'xashiap_portfolio_likes',
+          data: { likes: count }
+        })
+      });
+    } catch (e) {
+      // Graceful offline fallback
+    }
+  }
 
   function updateLikeWidgetTexts() {
     if (!likeBtn) return;
@@ -570,13 +605,19 @@ document.addEventListener('DOMContentLoaded', () => {
       likeBtn.classList.add('liked');
     }
 
+    // Sync with global cloud database on page load
+    syncLikesFromCloud();
+
     likeBtn.addEventListener('click', () => {
-      // Increment like count
+      // Increment like count locally for instant responsiveness
       currentLikes++;
       localStorage.setItem('portfolio_likes_count', currentLikes);
       localStorage.setItem('portfolio_has_liked', 'true');
       likeCounter.textContent = currentLikes;
       likeBtn.classList.add('liked');
+
+      // Sync updated count to global cloud database
+      syncLikesToCloud(currentLikes);
 
       // Heart bounce animation
       const heart = likeBtn.querySelector('.like-heart');
