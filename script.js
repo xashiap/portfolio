@@ -148,6 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
       card.setAttribute('data-id', project.id);
 
       const categoryLabel = translations[currentLang].portfolio[
+        project.category === 'ai' ? 'filterAi' :
         project.category === 'computer' ? 'filterComputer' :
         project.category === 'film' ? 'filterFilm' : 'filterPhoto'
       ];
@@ -165,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           </div>
           <span class="project-tag">
-            <i class="fa-solid ${project.category === 'computer' ? 'fa-desktop' : project.category === 'film' ? 'fa-film' : 'fa-camera'}"></i>
+            <i class="fa-solid ${project.category === 'ai' ? 'fa-wand-magic-sparkles' : project.category === 'computer' ? 'fa-desktop' : project.category === 'film' ? 'fa-film' : 'fa-camera'}"></i>
           </span>
         </div>
         <div class="project-body">
@@ -288,8 +289,6 @@ document.addEventListener('DOMContentLoaded', () => {
       video.controls = true;
       video.autoplay = true;
       video.playsInline = true;
-      video.style.width = '100%';
-      video.style.height = '100%';
       modalMediaContainer.appendChild(video);
     } else {
       const img = document.createElement('img');

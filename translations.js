@@ -64,6 +64,7 @@ const translations = {
       filterFilm: "فیلم",
       filterPhoto: "عکس",
       filterComputer: "کامپیوتر",
+      filterAi: "هوش مصنوعی",
       viewProject: "مشاهده جزئیات",
       watchVideo: "پخش ویدیو"
     },
@@ -177,6 +178,7 @@ const translations = {
       filterFilm: "Film",
       filterPhoto: "Photo",
       filterComputer: "Computer",
+      filterAi: "AI Creation",
       viewProject: "View Details",
       watchVideo: "Watch Video"
     },
@@ -230,6 +232,24 @@ const translations = {
 const projectsData = [
   {
     id: 1,
+    category: "ai",
+    type: "video",
+    title: {
+      fa: "تبریک تولد با بازآفرینی شاهکارهای نقاشی (شام آخر)",
+      en: "The Last Supper Birthday — Classical Art AI Animation"
+    },
+    desc: {
+      fa: "تبریک تولد با استفاده از نقاشی‌های معروف و تلفیق کیک تولد با نقاشی و متحرک‌سازی آن؛ ساخت تصاویر، متحرک‌سازی کاراکترها و تولید موزیک با هوش مصنوعی به همراه اجرای جزئیات و تدوین نهایی در افترافکت.",
+      en: "Creative birthday celebration reimagining Da Vinci's Last Supper; AI-driven image synthesis, character animation, and custom music production, finalized with fine compositing in After Effects."
+    },
+    client: "پروژه خلاقانه / Creative AI Project",
+    tools: ["AI Video", "AI Image Gen", "AI Music", "After Effects"],
+    videoUrl: "videos/the_last_supper_528.mp4",
+    poster: "images/projects/the_last_supper_poster.jpg",
+    date: "2025"
+  },
+  {
+    id: 2,
     category: "computer",
     type: "video",
     title: {
