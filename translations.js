@@ -59,12 +59,9 @@ const translations = {
     portfolio: {
       badge: "کارهای اخیر",
       title: "نمونه‌کارها و پروژه‌ها",
-      subtitle: "مجموعه‌ای از پروژه‌های تدوین، طراحی و موشن‌گرافیک دسته‌بندی‌شده بر اساس مدیا",
+      subtitle: "مجموعه‌ای از پروژه‌های تدوین ویدیو، تیزر و موشن‌گرافیک",
       filterAll: "همه",
-      filterMotion: "موشن گرافیک",
-      filterFilm: "فیلم",
-      filterPhoto: "عکس",
-      filterComputer: "کامپیوتر",
+      filterFilm: "فیلم و موشن",
       filterAi: "هوش مصنوعی",
       viewProject: "مشاهده جزئیات",
       watchVideo: "پخش ویدیو"
@@ -174,12 +171,9 @@ const translations = {
     portfolio: {
       badge: "Selected Projects",
       title: "Portfolio & Works",
-      subtitle: "Curated collection of projects categorized by media format",
+      subtitle: "Curated collection of video editing, commercial teasers, and motion graphics",
       filterAll: "All",
-      filterMotion: "Motion Graphics",
-      filterFilm: "Film",
-      filterPhoto: "Photo",
-      filterComputer: "Computer",
+      filterFilm: "Film & Motion",
       filterAi: "AI Creation",
       viewProject: "View Details",
       watchVideo: "Watch Video"
@@ -244,7 +238,6 @@ const projectsData = [
       fa: "تبریک تولد با استفاده از نقاشی‌های معروف و تلفیق کیک تولد با نقاشی و متحرک‌سازی آن؛ ساخت تصاویر، متحرک‌سازی کاراکترها و تولید موزیک با هوش مصنوعی به همراه اجرای جزئیات و تدوین نهایی در افترافکت.",
       en: "Creative birthday celebration reimagining Da Vinci's Last Supper; AI-driven image synthesis, character animation, and custom music production, finalized with fine compositing in After Effects."
     },
-    client: "پروژه خلاقانه / Creative AI Project",
     tools: ["AI Video", "AI Image Gen", "AI Music", "After Effects"],
     videoUrl: "videos/the_last_supper_528.mp4",
     poster: "images/projects/the_last_supper_poster.jpg",
@@ -252,7 +245,7 @@ const projectsData = [
   },
   {
     id: 2,
-    category: "motion",
+    category: "film",
     type: "video",
     title: {
       fa: "موشن‌استوری تبریک شب یلدا",
@@ -269,7 +262,7 @@ const projectsData = [
   },
   {
     id: 3,
-    category: "motion",
+    category: "film",
     type: "video",
     title: {
       fa: "موشن‌استوری جذب نیرو و استخدام",
@@ -286,7 +279,7 @@ const projectsData = [
   },
   {
     id: 4,
-    category: "motion",
+    category: "film",
     type: "video",
     title: {
       fa: "موشن‌استوری دعوت به همکاری و استخدام",
@@ -303,7 +296,7 @@ const projectsData = [
   },
   {
     id: 5,
-    category: "motion",
+    category: "film",
     type: "video",
     title: {
       fa: "تیزر سه‌بعدی و جلوه‌های ویژه بیلبورد شهری (CGI / FOOH)",
@@ -320,7 +313,7 @@ const projectsData = [
   },
   {
     id: 6,
-    category: "motion",
+    category: "film",
     type: "video",
     title: {
       fa: "لوگو موشن اختصاصی و متحرک‌سازی نشان تجاری",
@@ -337,7 +330,7 @@ const projectsData = [
   },
   {
     id: 7,
-    category: "motion",
+    category: "film",
     type: "video",
     title: {
       fa: "موشن‌استوری مناسبتی تبریک روز مهندس",
@@ -354,7 +347,7 @@ const projectsData = [
   },
   {
     id: 8,
-    category: "motion",
+    category: "film",
     type: "video",
     title: {
       fa: "موشن‌استوری مفهومی و انیمیشن شب یلدا",
@@ -371,7 +364,7 @@ const projectsData = [
   },
   {
     id: 9,
-    category: "motion",
+    category: "film",
     type: "video",
     title: {
       fa: "موشن‌استوری کاراکتر انیمیشن و اطلاع‌رسانی",
@@ -384,114 +377,6 @@ const projectsData = [
     tools: ["After Effects", "Illustrator", "Character Animation"],
     videoUrl: "videos/project_9.mp4",
     poster: "images/projects/project_9_poster.jpg",
-    date: "2024"
-  },
-  {
-    id: 10,
-    category: "computer",
-    type: "video",
-    title: {
-      fa: "انیمیشن تیزر تبلیغاتی نئون",
-      en: "Neon Tech Promo Motion Graphic"
-    },
-    desc: {
-      fa: "طراحی موشن‌گرافیک با افترافکت، ایلاستریتور و جلوه‌های بصری دیجیتال",
-      en: "Motion graphics created with After Effects & Illustrator featuring modern visual FX"
-    },
-    client: "CyberTech Co.",
-    tools: ["After Effects", "Illustrator", "Photoshop"],
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-    poster: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80",
-    date: "2025"
-  },
-  {
-    id: 11,
-    category: "film",
-    type: "video",
-    title: {
-      fa: "تیزر مستند سینمایی طبیعت",
-      en: "Cinematic Nature Documentary Teaser"
-    },
-    desc: {
-      fa: "تدوین ریتمیک در پریمیر، اصلاح رنگ سینمایی و صداگذاری حرفه‌ای",
-      en: "Fast-paced cinematic montage with rhythm editing and sound design"
-    },
-    client: "Nature Media",
-    tools: ["Premiere Pro", "Photoshop"],
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-    poster: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    date: "2024"
-  },
-  {
-    id: 12,
-    category: "photo",
-    type: "image",
-    title: {
-      fa: "طراحی پوستر و هویت بصری کنسرت موسیقی",
-      en: "Concert Poster & Visual Art"
-    },
-    desc: {
-      fa: "طراحی پوستر گرافیکی، فوتومونتاژ با فتوشاپ و تایپوگرافی با ایلاستریتور",
-      en: "Graphic poster design, photo-manipulation with Photoshop, and custom typography"
-    },
-    client: "Electro Beats Festival",
-    tools: ["Photoshop", "Illustrator"],
-    imageUrl: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
-    poster: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
-    date: "2024"
-  },
-  {
-    id: 13,
-    category: "computer",
-    type: "video",
-    title: {
-      fa: "لوگو موشن و استوری موشن تبلیغاتی",
-      en: "Dynamic Logo Animation & Social Motion"
-    },
-    desc: {
-      fa: "طراحی ترنزیشن‌های کامپیوتری، موشن لوگو و وکتورهای متحرک",
-      en: "Dynamic logo reveal, animated vector assets, and social motion promo"
-    },
-    client: "TechVision Channel",
-    tools: ["After Effects", "Illustrator"],
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-    poster: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80",
-    date: "2025"
-  },
-  {
-    id: 14,
-    category: "film",
-    type: "video",
-    title: {
-      fa: "تدوین تیزر تبلیغاتی محصول و ریلز اینستاگرام",
-      en: "Commercial Product Promo Reel"
-    },
-    desc: {
-      fa: "تدوین پرانرژی و سرعتی، کات‌های منطبق بر ضرباهنگ و بهینه‌سازی ویدیویی",
-      en: "High-energy commercial edit with beat-sync cuts, speed ramps, and audio mixing"
-    },
-    client: "Urban Brand Studio",
-    tools: ["Premiere Pro", "After Effects"],
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
-    poster: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80",
-    date: "2024"
-  },
-  {
-    id: 15,
-    category: "photo",
-    type: "image",
-    title: {
-      fa: "طراحی بسته بندی، پوستر تبلیغاتی و آرت‌ورک",
-      en: "Commercial Artwork & Poster Design"
-    },
-    desc: {
-      fa: "طراحی لیبل، پوستر مینیمال با فتوشاپ، ایلاستریتور و بهره‌گیری از هوش مصنوعی",
-      en: "Minimalist poster, branding assets created with Photoshop, Illustrator, and AI tools"
-    },
-    client: "Artisan Lab",
-    tools: ["Illustrator", "Photoshop", "AI Tools"],
-    imageUrl: "https://images.unsplash.com/photo-1559525839-b184a4d698c7?auto=format&fit=crop&w=800&q=80",
-    poster: "https://images.unsplash.com/photo-1559525839-b184a4d698c7?auto=format&fit=crop&w=800&q=80",
     date: "2024"
   }
 ];

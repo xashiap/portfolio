@@ -148,10 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
       card.setAttribute('data-id', project.id);
 
       const categoryLabel = translations[currentLang].portfolio[
-        project.category === 'ai' ? 'filterAi' :
-        project.category === 'motion' ? 'filterMotion' :
-        project.category === 'computer' ? 'filterComputer' :
-        project.category === 'film' ? 'filterFilm' : 'filterPhoto'
+        project.category === 'ai' ? 'filterAi' : 'filterFilm'
       ];
 
       const toolsBadges = project.tools
@@ -167,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           </div>
           <span class="project-tag">
-            <i class="fa-solid ${project.category === 'ai' ? 'fa-wand-magic-sparkles' : project.category === 'motion' ? 'fa-shapes' : project.category === 'computer' ? 'fa-desktop' : project.category === 'film' ? 'fa-film' : 'fa-camera'}"></i>
+            <i class="fa-solid ${project.category === 'ai' ? 'fa-wand-magic-sparkles' : 'fa-film'}"></i>
           </span>
         </div>
         <div class="project-body">
