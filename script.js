@@ -149,6 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const categoryLabel = translations[currentLang].portfolio[
         project.category === 'ai' ? 'filterAi' :
+        project.category === 'motion' ? 'filterMotion' :
         project.category === 'computer' ? 'filterComputer' :
         project.category === 'film' ? 'filterFilm' : 'filterPhoto'
       ];
@@ -166,11 +167,11 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           </div>
           <span class="project-tag">
-            <i class="fa-solid ${project.category === 'ai' ? 'fa-wand-magic-sparkles' : project.category === 'computer' ? 'fa-desktop' : project.category === 'film' ? 'fa-film' : 'fa-camera'}"></i>
+            <i class="fa-solid ${project.category === 'ai' ? 'fa-wand-magic-sparkles' : project.category === 'motion' ? 'fa-shapes' : project.category === 'computer' ? 'fa-desktop' : project.category === 'film' ? 'fa-film' : 'fa-camera'}"></i>
           </span>
         </div>
         <div class="project-body">
-          <div class="project-client">${project.client}</div>
+          ${project.client ? `<div class="project-client">${project.client}</div>` : ''}
           <h3 class="project-title">${project.title[currentLang]}</h3>
           <p class="project-desc">${project.desc[currentLang]}</p>
           <div class="project-tools">
@@ -297,7 +298,13 @@ document.addEventListener('DOMContentLoaded', () => {
       modalMediaContainer.appendChild(img);
     }
 
-    modalClient.textContent = project.client;
+    if (project.client) {
+      modalClient.textContent = project.client;
+      modalClient.style.display = 'block';
+    } else {
+      modalClient.textContent = '';
+      modalClient.style.display = 'none';
+    }
     modalTitle.textContent = project.title[currentLang];
     modalDesc.textContent = project.desc[currentLang];
     modalDate.textContent = project.date || '2025';

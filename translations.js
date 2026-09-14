@@ -61,6 +61,7 @@ const translations = {
       title: "نمونه‌کارها و پروژه‌ها",
       subtitle: "مجموعه‌ای از پروژه‌های تدوین، طراحی و موشن‌گرافیک دسته‌بندی‌شده بر اساس مدیا",
       filterAll: "همه",
+      filterMotion: "موشن گرافیک",
       filterFilm: "فیلم",
       filterPhoto: "عکس",
       filterComputer: "کامپیوتر",
@@ -175,6 +176,7 @@ const translations = {
       title: "Portfolio & Works",
       subtitle: "Curated collection of projects categorized by media format",
       filterAll: "All",
+      filterMotion: "Motion Graphics",
       filterFilm: "Film",
       filterPhoto: "Photo",
       filterComputer: "Computer",
@@ -250,6 +252,142 @@ const projectsData = [
   },
   {
     id: 2,
+    category: "motion",
+    type: "video",
+    title: {
+      fa: "موشن‌استوری تبریک شب یلدا",
+      en: "Yalda Night Celebration — Motion Graphic Story"
+    },
+    desc: {
+      fa: "طراحی و انیمیت موشن‌استوری مناسبتی تبریک شب یلدا با استفاده از المان‌های متحرک سنتی، انار، برگ‌های وکتوری و تایپوگرافی اختصاصی با ریتم پویا و چشم‌نواز.",
+      en: "Custom holiday motion graphics story designed for Yalda Night celebration, featuring stylized pomegranate animations, fluid botanical vectors, and festive typography."
+    },
+    tools: ["After Effects", "Illustrator"],
+    videoUrl: "videos/project_2.mp4",
+    poster: "images/projects/project_2_poster.jpg",
+    date: "2024"
+  },
+  {
+    id: 3,
+    category: "motion",
+    type: "video",
+    title: {
+      fa: "موشن‌استوری جذب نیرو و استخدام",
+      en: "Job Recruitment — Motion Graphic Story"
+    },
+    desc: {
+      fa: "طراحی و متحرک‌سازی استوری موشن جذب نیرو و فرصت‌های شغلی با تایتل متحرک «جای شما اینجاست»، المان صندلی اداری و نورپردازی متمرکز اسپات‌لایت بر روی پس‌زمینه پویا.",
+      en: "Recruitment motion graphic story announcing creative positions, featuring dynamic typography, animated spotlight focus, and minimalist office elements."
+    },
+    tools: ["After Effects", "Illustrator"],
+    videoUrl: "videos/project_3.mp4",
+    poster: "images/projects/project_3_poster.jpg",
+    date: "2024"
+  },
+  {
+    id: 4,
+    category: "motion",
+    type: "video",
+    title: {
+      fa: "موشن‌استوری دعوت به همکاری و استخدام",
+      en: "Job Hiring & Recruitment Motion Story"
+    },
+    desc: {
+      fa: "طراحی و متحرک‌سازی استوری موشن کاراکترمحور دعوت به همکاری با تایتل متحرک «جات تو تیم ما خالیه»، انیمیت کاراکتر و معرفی عناوین شغلی در قالبی پویا و مدرن.",
+      en: "Character-driven recruitment motion graphic story featuring animated typography, custom character animation, and dynamic job role reveals."
+    },
+    tools: ["After Effects", "Illustrator"],
+    videoUrl: "videos/project_4.mp4",
+    poster: "images/projects/project_4_poster.jpg",
+    date: "2024"
+  },
+  {
+    id: 5,
+    category: "motion",
+    type: "video",
+    title: {
+      fa: "تیزر سه‌بعدی و جلوه‌های ویژه بیلبورد شهری (CGI / FOOH)",
+      en: "3D VFX Urban Billboard Animation (FOOH / CGI)"
+    },
+    desc: {
+      fa: "اجرای جلوه‌های ویژه بصری (VFX) و شبیه‌سازی فیزیک سه‌بعدی به سبک بیلبوردهای محیطی تعاملی (FOOH)؛ متحرک‌سازی ریزش دانه‌های انار و کامپوزیت با تصویر واقعی و تایپوگرافی یلدا.",
+      en: "High-impact 3D VFX and Fake-Out-Of-Home (FOOH) urban billboard animation; physics simulation of falling pomegranates seamlessly composited with real footage."
+    },
+    tools: ["After Effects", "3D Motion", "Compositing"],
+    videoUrl: "videos/project_5.mp4",
+    poster: "images/projects/project_5_poster.jpg",
+    date: "2024"
+  },
+  {
+    id: 6,
+    category: "motion",
+    type: "video",
+    title: {
+      fa: "لوگو موشن اختصاصی و متحرک‌سازی نشان تجاری",
+      en: "Dynamic Brand Logo Animation & Identity Reveal"
+    },
+    desc: {
+      fa: "طراحی و انیمیت روان لوگو موشن با تکیه بر فرم مینیمال و القای حس رضایت، ترنزیشن‌های نرم خطی و سایه‌های شناور در پس‌زمینه قرمز پرانرژی.",
+      en: "Clean and dynamic logo animation emphasizing smooth vector transitions, positive brand emotion, and floating dimensional shadows."
+    },
+    tools: ["After Effects", "Illustrator"],
+    videoUrl: "videos/project_6.mp4",
+    poster: "images/projects/project_6_poster.jpg",
+    date: "2024"
+  },
+  {
+    id: 7,
+    category: "motion",
+    type: "video",
+    title: {
+      fa: "موشن‌استوری مناسبتی تبریک روز مهندس",
+      en: "Engineer's Day Celebration — Motion Graphic Story"
+    },
+    desc: {
+      fa: "طراحی موشن‌استوری مناسبتی با تلفیق المان سه‌بعدی کلاه‌خود ایمنی، زنجیر جرثقیل متحرک، تایپوگرافی سه‌بعدی و انیمیت خط افق شهری.",
+      en: "Commemorative Engineer's Day motion story blending 3D safety helmet elements, mechanical crane chains, customized 3D typography, and urban skyline."
+    },
+    tools: ["After Effects", "3D Motion", "Illustrator"],
+    videoUrl: "videos/project_7.mp4",
+    poster: "images/projects/project_7_poster.jpg",
+    date: "2024"
+  },
+  {
+    id: 8,
+    category: "motion",
+    type: "video",
+    title: {
+      fa: "موشن‌استوری مفهومی و انیمیشن شب یلدا",
+      en: "Conceptual Yalda Night Motion Story"
+    },
+    desc: {
+      fa: "انیمیشن و موشن‌استوری خلاقانه با سناریوی تکثیر المان‌های یلدایی، ایجاد نقطه تمرکز بصری (Focus Point) و تایپوگرافی عاطفی و گرم مناسبتی.",
+      en: "Creative Yalda motion graphics story featuring procedural watermelon animation, visual focal point contrast, and heartfelt festive typography."
+    },
+    tools: ["After Effects", "Illustrator"],
+    videoUrl: "videos/project_8.mp4",
+    poster: "images/projects/project_8_poster.jpg",
+    date: "2024"
+  },
+  {
+    id: 9,
+    category: "motion",
+    type: "video",
+    title: {
+      fa: "موشن‌استوری کاراکتر انیمیشن و اطلاع‌رسانی",
+      en: "2D Character Animation & Info Motion Story"
+    },
+    desc: {
+      fa: "انیمیت کاراکتر دوبعدی (Walk Cycle) به همراه موشن تایپوگرافی، طراحی المان‌های وکتوری متحرک و افکت‌های صوتی ریتمیک برای کمپین‌های اطلاع‌رسانی.",
+      en: "2D stylized character walk-cycle animation combined with kinetic typography, sound effects, and clean vector design for announcement campaigns."
+    },
+    tools: ["After Effects", "Illustrator", "Character Animation"],
+    videoUrl: "videos/project_9.mp4",
+    poster: "images/projects/project_9_poster.jpg",
+    date: "2024"
+  },
+  {
+    id: 10,
     category: "computer",
     type: "video",
     title: {
@@ -267,7 +405,7 @@ const projectsData = [
     date: "2025"
   },
   {
-    id: 2,
+    id: 11,
     category: "film",
     type: "video",
     title: {
@@ -285,7 +423,7 @@ const projectsData = [
     date: "2024"
   },
   {
-    id: 3,
+    id: 12,
     category: "photo",
     type: "image",
     title: {
@@ -303,7 +441,7 @@ const projectsData = [
     date: "2024"
   },
   {
-    id: 4,
+    id: 13,
     category: "computer",
     type: "video",
     title: {
@@ -321,7 +459,7 @@ const projectsData = [
     date: "2025"
   },
   {
-    id: 5,
+    id: 14,
     category: "film",
     type: "video",
     title: {
@@ -339,7 +477,7 @@ const projectsData = [
     date: "2024"
   },
   {
-    id: 6,
+    id: 15,
     category: "photo",
     type: "image",
     title: {
